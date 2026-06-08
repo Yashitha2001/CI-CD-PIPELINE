@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecureOps Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header>
+    <div class="logo">&#9632; SECUREOPS</div>
+    <nav>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#security">Security</a>
+      <a href="#status">Status</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-label">CI/CD SECURITY PIPELINE</div>
+      <h1>Built to ship.<br /><span class="accent">Secured by default.</span></h1>
+      <p class="hero-sub">
+        A demonstration of a fully automated, security-first CI/CD pipeline using
+        GitHub Actions — from code commit to live deployment, with zero manual steps.
+      </p>
+      <div class="cta-row">
+        <a class="btn-primary" href="https://github.com" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="btn-ghost" href="#pipeline">How it works ↓</a>
+      </div>
+    </section>
+
+    <section id="pipeline" class="section">
+      <div class="section-tag">PIPELINE OVERVIEW</div>
+      <h2>Three stages.<br />Every commit.</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-num">01</div>
+          <h3>Test &amp; Lint</h3>
+          <p>HTML is validated with <code>html-validate</code> and CSS checked on every push to catch structural issues early — before anything reaches deployment.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">02</div>
+          <h3>Security Scan</h3>
+          <p>Trivy scans for vulnerabilities. GitHub's secret scanning and CodeQL catch exposed credentials and common code weaknesses automatically.</p>
+        </div>
+        <div class="card">
+          <div class="card-num">03</div>
+          <h3>Deploy</h3>
+          <p>On a successful <code>main</code> branch push, the site is published to GitHub Pages automatically. No manual uploads, no broken deploys.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="security" class="section section-dark">
+      <div class="section-tag">SECURITY LAYERS</div>
+      <h2>Defense in depth,<br />baked into the build.</h2>
+      <div class="security-grid">
+        <div class="sec-item">
+          <div class="sec-icon">&#128274;</div>
+          <div>
+            <strong>Secret Scanning</strong>
+            <p>GitHub's built-in secret scanning monitors every commit for accidentally exposed API keys, tokens, and credentials.</p>
+          </div>
+        </div>
+        <div class="sec-item">
+          <div class="sec-icon">&#128269;</div>
+          <div>
+            <strong>Trivy Vulnerability Scan</strong>
+            <p>Aqua Security's Trivy scans the filesystem for known CVEs and misconfigurations before deployment proceeds.</p>
+          </div>
+        </div>
+        <div class="sec-item">
+          <div class="sec-icon">&#9878;</div>
+          <div>
+            <strong>CodeQL Analysis</strong>
+            <p>GitHub Advanced Security's CodeQL performs static analysis to detect injection risks and logic flaws in source code.</p>
+          </div>
+        </div>
+        <div class="sec-item">
+          <div class="sec-icon">&#128203;</div>
+          <div>
+            <strong>Dependency Review</strong>
+            <p>Pull request checks automatically flag new dependencies with known vulnerabilities before they're merged.</p>
+          </div>
+        </div>
+        <div class="sec-item">
+          <div class="sec-icon">&#128100;</div>
+          <div>
+            <strong>Branch Protection</strong>
+            <p>Direct pushes to <code>main</code> are blocked. All changes require CI to pass, enforcing the pipeline as a gate.</p>
+          </div>
+        </div>
+        <div class="sec-item">
+          <div class="sec-icon">&#128275;</div>
+          <div>
+            <strong>Pinned Action Versions</strong>
+            <p>All GitHub Actions are pinned to specific commit SHAs, preventing supply chain attacks from modified action tags.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="status" class="section">
+      <div class="section-tag">LIVE STATUS</div>
+      <h2>Pipeline health,<br />at a glance.</h2>
+      <div class="status-table">
+        <div class="status-row header-row">
+          <span>Workflow</span>
+          <span>Trigger</span>
+          <span>Status</span>
+        </div>
+        <div class="status-row">
+          <span>&#9654; Lint &amp; Validate</span>
+          <span>push / PR</span>
+          <span class="badge green">Passing</span>
+        </div>
+        <div class="status-row">
+          <span>&#9654; Security Scan</span>
+          <span>push / PR</span>
+          <span class="badge green">Passing</span>
+        </div>
+        <div class="status-row">
+          <span>&#9654; CodeQL Analysis</span>
+          <span>push / schedule</span>
+          <span class="badge green">Passing</span>
+        </div>
+        <div class="status-row">
+          <span>&#9654; Deploy to Pages</span>
+          <span>main push</span>
+          <span class="badge green">Live</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>&#9632; SECUREOPS</span>
+    <span>Deployed via GitHub Actions &bull; Secured by default</span>
+  </footer>
+</body>
+</html>
