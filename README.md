@@ -5,7 +5,7 @@ The application is intentionally minimal; the focus of this repository is the
 pipeline itself — automated testing, multi-layer security scanning, and
 continuous deployment to GitHub Pages on every push to `main`.
 
-**Live site:** `https://<your-github-username>.github.io/<your-repo-name>/`
+**Live site:** `https://yashitha2001.github.io/CI-CD-PIPELINE/`
 
 ---
 
