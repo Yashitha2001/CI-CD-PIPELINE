@@ -1,7 +1,3 @@
-# ─────────────────────────────────────────────────────────────────
-# codeql.yml  —  Static code analysis via GitHub CodeQL
-# Scans GitHub Actions workflow files for security issues
-# ─────────────────────────────────────────────────────────────────
 name: CodeQL Analysis
 
 on:
@@ -10,7 +6,7 @@ on:
   pull_request:
     branches: ["main"]
   schedule:
-    - cron: "0 8 * * 1"  # Every Monday 08:00 UTC
+    - cron: "0 8 * * 1"
 
 permissions:
   contents: read
